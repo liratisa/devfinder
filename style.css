@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+  background-color: #141c2f;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+h2,
+span,
+p,
+h1,
+label,
+ion-icon,
+h3 {
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.mode {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.light {
+  transition: all 2s ease-in;
+}
+
+.dark {
+  transition: all 2s ease-in;
+}
+
+.mode a {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+
+body.light-mode .mode a:visited {
+  color: #111;
+}
+
+body.light-mode .light {
+  display: none;
+}
+
+body .mode a:visited {
+  color: #fff;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  margin: 10px 0;
+}
+
+.search-btn {
+  font-family: "IBM Plex Mono", monospace;
+  padding: 5px 15px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  background-color: #0078fe;
+  float: right;
+  position: absolute;
+  right: 10px;
+  font-size: 1rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  padding: 20px 35px;
+  border-radius: 4px;
+  width: 100%;
+  background-color: #1f2a48;
+  border: none;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+input[type="text"]:focus {
+  border: 1px solid #fff;
+}
+
+input[type="text"]::placeholder {
+  font-family: "IBM Plex Mono", monospace;
+  color: #fff;
+  padding-left: 5px;
+}
+
+input[type="text"]::placeholder:focus {
+  color: #fff;
+}
+
+.search-icon {
+  color: #165bab;
+  float: left;
+  position: absolute;
+  left: 10px;
+}
+
+.profile {
+  display: none;
+  grid-template-columns: 1fr 3fr;
+  margin-top: 20px;
+  background-color: #1f2a48;
+  padding: 30px;
+  border-radius: 4px;
+}
+
+.profile-img img {
+  border-radius: 50%;
+  max-width: 70%;
+  justify-self: center;
+}
+
+.profile-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-username {
+  text-transform: lowercase;
+  color: #0078fe;
+  margin-bottom: 10px;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  background-color: #141c2f;
+  padding: 20px;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+
+.profile-stats h3 {
+  font-weight: normal;
+}
+
+.profile-stats p {
+  font-weight: bold;
+}
+
+.profile-itens {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.profile-itens li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.null {
+  opacity: 0.5;
+}
+
+.not-found {
+  display: none;
+}
+
+.not-found.active {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.not-found p {
+  margin: 15px;
+}
+
+.not-found img {
+  width: 50%;
+  border-radius: 5px;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.light-mode {
+  background-color: #f5f8ff;
+}
+
+body.light-mode h1,
+body.light-mode label {
+  color: #111;
+}
+
+.profile,
+.search {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+body.light-mode .search,
+body.light-mode .profile {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+body.light-mode .search-input,
+body.light-mode .profile {
+  background-color: #fff;
+  color: #111;
+  outline: none;
+}
+
+body.light-mode .search-input::placeholder {
+  color: #111;
+}
+
+body.light-mode,
+body.light-mode .profile h2,
+body.light-mode .profile span,
+body.light-mode .profile,
+body.light-mode ion-icon,
+body.light-mode .profile p,
+body.light-mode .profile a {
+  color: #111;
+}
+
+body.light-mode .profile-stats {
+  background-color: #f5f8ff;
+}
+
+body.light-mode .profile-stats h3 {
+  color: rgb(34, 33, 33);
+}
+
+body.light-mode .not-found.active p {
+  color: #111;
+}
+
+body.light-mode .not-found.active {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+ion-icon .dark,
+ion-icon .light {
+  transition: all 0.3s ease-in-out;
+}

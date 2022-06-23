@@ -6,7 +6,6 @@ function notFound() {
   profile.style.display = "none";
   const notFound = document.querySelector(".not-found");
   notFound.classList.add("active");
-  //consertar p remover coiso
 }
 
 function showProfile(json) {

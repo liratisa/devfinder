@@ -38,19 +38,11 @@ nav {
   cursor: pointer;
 }
 
-.light {
-  transition: all 2s ease-in;
-}
-
-.dark {
-  transition: all 2s ease-in;
-}
-
 .mode a {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1.5px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 body.light-mode .mode a:visited {
@@ -281,7 +273,6 @@ body.light-mode .not-found.active {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-ion-icon .dark,
-ion-icon .light {
-  transition: all 0.3s ease-in-out;
+body.light-mode .mode {
+  transition: all 2s ease-in-out;
 }
